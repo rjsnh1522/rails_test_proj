@@ -1,4 +1,29 @@
 <%= render 'includes/navbar' %>
 
-
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+      <th>#</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    
+      
+    <tbody>
+    <% i=1 %>
+    <% @all_products.each do |item| %>
+      <tr>
+      <td><%= i %></td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <% i+=1 %>
+    <% end %>
+    </tbody>
+  </table>
+</div>
 
