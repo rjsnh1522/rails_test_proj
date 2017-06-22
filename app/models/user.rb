@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-      # self.table_name = "ilance_users"
+      self.table_name = "users"
   has_secure_password
-  has_many :projects
+  has_many :project
 
 
   def current_user

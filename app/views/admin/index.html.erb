@@ -2,28 +2,45 @@
 
 <div class="container">
 <table class="table">
+   <%= text_field_tag :email,params[:name], class: "form-control" ,placeholder:"Search...." %>
+   </br>
     <thead>
       <tr>
-      <th>#</th>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+      <th><b>#</b> <a href="#"><i class="fa fa-fw fa-sort"></i></a>
+      </th>
+      <th>id  <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+        <th>Project Title <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+        <th>User Name <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+        <th>Category Name <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+        <th>project id <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+        <th>Tags  <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+        <th>Buy Now Price  <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+      <th>Filtered Auctiontype <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+      <th>Project Detail <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+      <th>Project Type <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
       </tr>
     </thead>
-    
-      
     <tbody>
     <% i=1 %>
-    <% @all_products.each do |item| %>
-      <tr>
-      <td><%= i %></td>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
+    <% @data.each do |item| %>
+            <tr>
+              <td><%= i %></td>
+              <td><%= item.id %></td>
+              <td><%= item.project_title %></td>
+              <td><%= item.user.username %></td>
+              <td><%= item.category.category_name %></td>
+              <td><%= item.project_id %></td>
+              <td><%= item.tags %></td>
+              <td><%= item.buynow_price %></td>
+              <td><%= item.filtered_auctiontype %></td>
+              <td><%= item.project_details %></td>
+              <td><%= item.project_type %></td>
+            </tr>
       <% i+=1 %>
     <% end %>
     </tbody>
   </table>
 </div>
+
+
 

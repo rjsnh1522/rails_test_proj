@@ -3,6 +3,6 @@ class AdminController < ApplicationController
 
 
   def index
-    @all_products=Project.get_users_projects(current_user)
+    @data = Project.all
   end
 end

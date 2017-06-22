@@ -1,6 +1,12 @@
 class SessionsController < ApplicationController
   skip_before_action :authorize
   def new
+    #abort(current_user.to_json)
+    if current_user.present?
+      redirect_to admin_url
+    
+      #redirect_to login_url
+    end
   end
 
   def create

@@ -4,12 +4,14 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
   resources :users
+  get 'project/index' => 'project#index'
 
   get 'admin'=>'admin#index'
   controller :sessions do
     get     'login'  => :new
     post    'login'  => :create
     delete  'logout' => :destroy
+
   end
   
   root 'admin#index'

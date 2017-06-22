@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620165512) do
+ActiveRecord::Schema.define(version: 20170621185240) do
+
+  create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string   "category_name"
+    t.string   "category_type"
+    t.string   "cid"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["id"], name: "index_categories_on_id", unique: true, using: :btree
+  end
 
   create_table "ilance_buynow_orders", primary_key: "orderid", force: :cascade, options: "ENGINE=MyISAM DEFAULT CHARSET=utf8" do |t|
     t.integer  "parentid",                                   default: 0,      null: false
@@ -351,6 +360,10 @@ ActiveRecord::Schema.define(version: 20170620165512) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "username"
+    t.string   "city"
+    t.string   "country"
+    t.string   "zipcode"
   end
 
 end
