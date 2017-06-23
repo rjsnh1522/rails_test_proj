@@ -1,23 +1,22 @@
 <%= render 'includes/navbar' %>
 
 <div class="container">
-<table class="table">
-   <%= text_field_tag :email,params[:name], class: "form-control" ,placeholder:"Search...." %>
+<table class="table" id="resultsTable">
+
    </br>
     <thead>
       <tr>
-      <th><b>#</b> <a href="#"><i class="fa fa-fw fa-sort"></i></a>
+      <th><b>#</b>
       </th>
-      <th>id  <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-        <th>Project Title <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-        <th>User Name <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-        <th>Category Name <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-        <th>project id <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-        <th>Tags  <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-        <th>Buy Now Price  <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-      <th>Filtered Auctiontype <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-      <th>Project Detail <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
-      <th>Project Type <a href="#"><i class="fa fa-fw fa-sort"></i></a></th>
+        <th>Project Title </th>
+        <th>User Name </th>
+        <th>Email </th>
+        <th>Category Name </th>
+        <th>project id </th>
+        <th>Buy Now Price </th>
+      <th>Filtered Auctiontype </th>
+      <th>Project Detail </th>
+      <th>Project Type</th>
       </tr>
     </thead>
     <tbody>
@@ -25,12 +24,12 @@
     <% @data.each do |item| %>
             <tr>
               <td><%= i %></td>
-              <td><%= item.id %></td>
               <td><%= item.project_title %></td>
               <td><%= item.user.username %></td>
+              <td><%= item.user.email %></td>
               <td><%= item.category.category_name %></td>
               <td><%= item.project_id %></td>
-              <td><%= item.tags %></td>
+            
               <td><%= item.buynow_price %></td>
               <td><%= item.filtered_auctiontype %></td>
               <td><%= item.project_details %></td>
@@ -42,5 +41,11 @@
   </table>
 </div>
 
-
+<ol>
+  <li>Joined three tables using rails association. User ,Category ,Products</li>
+  <li>Database file was provided by and it didnt had catgories table. I creted that using migration</li>
+  <li>Database is not normalized</li>
+  <li>Used Jquery dataTable plugin for sorting, searching, and pagination</li>
+  <li>I can make my own pluging for sorting searching and pagination</li>
+</ol>
 

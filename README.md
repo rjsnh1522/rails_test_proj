@@ -5,20 +5,20 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version ---   ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-linux]
+ 
+* Rails version --- Rails 5.0.4
 
-* System dependencies
+* IMPORTANT
+   SQL file is inside db folder please import it in mysql as the provide sql didn't had categories table I created my own.
 
 * Configuration
 
-* Database creation
+* Database creation  --- rake db:migrate 
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 1. Joined three tables using rails association. User ,Category ,Products
+ 2. Database file was provided by and it didnt had catgories table. I creted that using migration
+ 3. Database is not normalized
+ 4. Used Jquery dataTable plugin for sorting, searching, and pagination
+ 5. I can make my own pluging for sorting searching and pagination
