@@ -21,4 +21,4 @@ Things you may want to cover:
  2. Database file was provided by and it didnt had catgories table. I creted that using migration
  3. Database is not normalized
  4. Used Jquery dataTable plugin for sorting, searching, and pagination
- 5. I can make my own pluging for sorting searching and pagination
+ 5. I can make my own pluging for sorting searching and pagination but using plugin was the fastest and easy.
